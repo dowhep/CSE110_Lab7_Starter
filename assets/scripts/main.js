@@ -53,7 +53,7 @@ function initializeServiceWorker() {
     // B3. TODO - Register './sw.js' as a service worker (The MDN article
     //            "Using Service Workers" will help you here)
     try {
-      const swLocation = window.origin + "/sw.js";
+      const swLocation = window.location.href + "sw.js";
       const registration = await navigator.serviceWorker.register(swLocation, {
         scope: "/",
       });
